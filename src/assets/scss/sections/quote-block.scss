@@ -1,0 +1,110 @@
+/*
+  ___  _   _  ___ _____ _____   ____  _     ___   ____ _  __
+ / _ \| | | |/ _ \_   _| ____| | __ )| |   / _ \ / ___| |/ /
+| | | | | | | | | || | |  _|   |  _ \| |  | | | | |   | ' /
+| |_| | |_| | |_| || | | |___  | |_) | |__| |_| | |___| . \
+ \__\_\\___/ \___/ |_| |_____| |____/|_____\___/ \____|_|\_\
+*/
+
+.quote-block {
+  position: relative;
+  margin-top: $unit-lg;
+  padding: $unit-xxl $unit-xl $unit-xl 100px;
+  border-top: 1px solid $xlight-gray;
+
+  @include mq(lg) {
+    padding: $unit-xxl $unit-xl $unit-xl 50px;
+  }
+
+  @include mq(md) {
+    padding: $unit-xxl $unit-xl $unit-xl $unit-jumbo;
+  }
+
+  @include mq(sm) {
+    padding: $unit-xxl $unit-xl 0 $unit-xl;
+  }
+
+  h3.quote {
+    max-width: 2000px;
+    padding-left: $unit-jumbo;
+    padding-right: $unit-jumbo * 12;
+    font-family: $font-1;
+    font-size: $font-size-jumbo;
+    font-weight: $font-weight-xlight;
+    line-height: 115%;
+    color: $color-primary;
+    border-left: 4px solid $color-primary;
+
+    @include mq(lg) {
+      max-width: none;
+      padding-left: $unit-lg;
+      padding-right: 0;
+      font-size: $font-size-xxl;
+    }
+
+    @include mq(md) {
+      max-width: none;
+      padding-left: $unit-lg;
+      padding-right: 0;
+      font-size: $font-size-xxl;
+    }
+
+    @include mq(sm) {
+      max-width: none;
+      padding-right: 0;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-light
+    }
+  }
+
+  figcaption {
+    float: left;
+    width: 100%;
+    margin-top: $unit-lg;
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+  }
+
+  img {
+    position: absolute;
+    top: 80px;
+    right: $unit-md;
+    max-width: 600px;
+    z-index: 1001;
+
+    @include mq(xl) {
+      max-width: 500px;
+    }
+
+    @include mq(lg) {
+      top: 190px;
+      right: -150px;
+    }
+
+    @include mq(md) {
+      top: 210px;
+      right: -210px;
+    }
+
+    @include mq(sm) {
+      position: static;
+      right: 0;
+      max-width: 380px;
+      margin-top: $unit-lg;
+    }
+  }
+
+  &.reverse {
+    padding: $unit-xl $unit-xl $unit-xl $unit-xl;
+    border-top: 0;
+    text-align: right;
+
+    h3.quote {
+      float: right;
+      max-width: 1000px;
+      padding-right: $unit-jumbo;
+      border-left: none;
+      border-right: 4px solid $color-primary;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+/*
+  ___  _   _ ____   __        _____  ____  _  __
+ / _ \| | | |  _ \  \ \      / / _ \|  _ \| |/ /
+| | | | | | | |_) |  \ \ /\ / / | | | |_) | ' /
+| |_| | |_| |  _ <    \ V  V /| |_| |  _ <| . \
+ \___/ \___/|_| \_\    \_/\_/  \___/|_| \_\_|\_\
+
+*/
+
+.our-work-block {
+  position: relative;
+  padding: $unit-xxl $unit-xl $unit-jumbo $unit-xxl;
+
+  @include mq (md) {
+    padding: $unit-lg $unit $unit-xl $unit;
+  }
+
+  @include mq (sm) {
+    padding: $unit-lg $unit-lg $unit-xl $unit-lg;
+  }
+
+  h2 {
+    color: $white;
+  }
+
+  p {
+    margin-bottom: $unit-xxl;
+    color: $white;
+  }
+
+
+  .our-work-tile {
+    float: left;
+    width: calc(25% - .5rem);
+    min-height: 550px;
+    margin: .25rem;
+    padding: 1rem;
+    border: 1px solid $xlight-gray;
+    background-color: $white;
+    display: inline-block;
+
+    @include mq (lg) {
+      width: calc(33.333% - .5rem);
+    }
+
+    @include mq (md) {
+      width: calc(50% - .5rem);
+      padding: $unit-lg .25rem $unit-sm .25rem;
+      display: inline;
+    }
+
+    @include mq (sm) {
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      padding: $unit-xs;
+    }
+
+    h3 {
+      float: left;
+      width: 100%;
+      font-size: $font-size-lg * .9;
+      color: $black;
+      text-transform: uppercase;
+
+      @include mq (md) {
+        font-size: $font-size-md;
+      }
+    }
+
+    .company {
+      float: left;
+      width: 100%;
+      font-size: $font-size * .9;
+      color: $color-primary;
+
+      @include mq (md) {
+        font-size: $font-size;
+        line-height: 135%;
+      }
+    }
+
+    span.technology {
+      float: left;
+      width: 100%;
+      margin-top: $unit;
+      margin-bottom: $unit-xl;
+      font-size: $font-size;
+      color: $gray;
+      text-transform: uppercase;
+
+      @include mq (md) {
+        font-size: $font-size-sm;
+        line-height: 135%;
+      }
+    }
+
+    .img-crop {
+      float: left;
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+
+      img {
+
+      }
+    }
+
+    .buttons {
+      float: left;
+      width: 100%;
+      margin-top: $unit-md;
+
+      .btn {
+        margin-right: $unit-xs;
+
+        @include mq (md) {
+          padding: $unit-xs $unit-sm;
+        }
+
+        @include mq (sm) {
+          margin-top: $unit;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+/*
+  ___  _   _ ____    ____  _____ ______     _____ ____ _____ ____
+ / _ \| | | |  _ \  / ___|| ____|  _ \ \   / /_ _/ ___| ____/ ___|
+| | | | | | | |_) | \___ \|  _| | |_) \ \ / / | | |   |  _| \___ \
+| |_| | |_| |  _ <   ___) | |___|  _ < \ V /  | | |___| |___ ___) |
+ \___/ \___/|_| \_\ |____/|_____|_| \_\ \_/  |___\____|_____|____/
+
+*/
+
+.our-services-block {
+  position: relative;
+  float: left;
+  margin-top: 80px;
+  padding: $unit-xxl $unit-xl $unit-jumbo $unit-xl;
+  border-top: 1px solid $xlight-gray;
+
+  @include mq(sm) {
+    margin-top: 30px;
+  }
+
+  h2 {
+
+  }
+
+  p {
+    margin-bottom: $unit-md;
+    font-size: $font-size-md;
+  }
+
+  .services-tile {
+    float: left;
+    width: calc(33.333% - 20px);
+    min-height: 200px;
+    background-color: $white;
+    border: 1px solid $xlight-gray;
+    margin: 10px;
+    margin-top: $unit-md;
+    padding: $base-unit $base-unit $unit-xs $unit-lg;
+    display: inline-block;
+
+    @include mq (xl) {
+      width: calc(50% - 20px);
+      min-height: 200px;
+    }
+
+    @include mq (lg) {
+      width: calc(50% - 20px);
+      min-height: 200px;
+    }
+
+    @include mq (md) {
+      width: 100%;
+      margin-left: 0;
+      padding: $unit-md $unit-xxs $unit-xs $unit-xxs;
+    }
+
+    @include mq (sm) {
+      width: 100%;
+      margin-top: $unit-xxs;
+      margin-left: 0;
+    }
+
+    .tile-left {
+      float: left;
+      width: 80px;
+
+      @include mq (md) {
+        width: 100%;
+        text-align: center;
+      }
+
+      @include mq(sm) {
+        width: 100%;
+        text-align: center;
+      }
+
+      img {
+        max-width: 75px;
+
+        @include mq (sm) {
+          margin-top: $unit;
+        }
+      }
+    }
+
+    .tile-right {
+      float: left;
+      width: calc(100% - 80px);
+      padding: $base-unit $base-unit $base-unit $unit-lg;
+
+      @include mq(sm) {
+        width: 100%;
+        padding: $unit-xs $unit-xxs 0 $unit-xxs;
+      }
+
+      h4 {
+        font-size: $font-size-md;
+        font-weight: $font-weight-bold;
+
+        @include mq (md) {
+          margin-top: $unit;
+          text-align: center;
+        }
+
+        @include mq(sm) {
+          margin-top: $unit-xs;
+          text-align: center;
+        }
+      }
+
+      p {
+        font-size: $font-size-md;
+        line-height: 145%;
+
+        @include mq (lg) {
+          font-size: $font-size;
+        }
+
+        @include mq (md) {
+          font-size: $font-size;
+        }
+
+        @include mq (sm) {
+          font-size: $font-size;
+        }
+      }
+
+      @include mq (md) {
+        width: 100%;
+      }
+    }
+  }
+}

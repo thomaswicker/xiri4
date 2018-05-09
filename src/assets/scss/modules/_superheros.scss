@@ -1,0 +1,313 @@
+/*
+  ____  _   _ ____  _____ ____  _   _ _____ ____   ___  ____
+ / ___|| | | |  _ \| ____|  _ \| | | | ____|  _ \ / _ \/ ___|
+ \___ \| | | | |_) |  _| | |_) | |_| |  _| | |_) | | | \___ \
+  ___) | |_| |  __/| |___|  _ <|  _  | |___|  _ <| |_| |___) |
+ |____/ \___/|_|   |_____|_| \_\_| |_|_____|_| \_\\___/|____/
+*/
+
+
+/* ==========================================================================
+   %% Styling for Potion Superheros %%
+   ========================================================================== */
+
+#nav-modal {
+  transition: all .5s elastic;
+
+  &.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(191, 30, 35, .95);
+    z-index: 100001;
+
+    .superhero-nav {
+      padding-top: $unit-xxl;
+      background-color: transparent;
+      display: block !important;
+
+       ul {
+         float: left;
+         width: 100%;
+
+        li {
+          float: left;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+#nav-toggle {
+  padding: $unit $unit-lg $unit-lg $unit-lg;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+  text-align: center;
+  display: none;
+  z-index: 100002;
+
+  @include mq(sm) {
+    display: block;
+  }
+
+  &:hover {
+    i {
+      color: black;
+    }
+  }
+
+  i {
+    font-size: $font-size-lg;
+  }
+}
+
+.superhero {
+  position: relative;
+  min-height: 300px;
+  padding: $unit 0 $unit-jumbo $unit-jumbo;
+
+  @include mq(lg) {
+    min-height: 270px;
+    padding: $unit 2rem 1.5rem 2rem;
+  }
+
+  @include mq(md) {
+    min-height: 250px;
+    padding: $unit 2rem 1.5rem 2rem;
+  }
+
+  @include mq(sm) {
+    min-height: 320px;
+    padding: 1rem 2rem 2.5rem 2rem;
+  }
+
+  h2 {
+      color: $white;
+      font-size: $font-size-jumbo;
+      font-family: $font-2;
+      font-weight: 200;
+      padding: $unit 0 0 0;
+
+      @include mq(md) {
+        font-size: $font-size-jumbo;
+        line-height: $base-line-height * 2;
+      }
+
+      @include mq(sm) {
+        font-size: $base-line-height;
+        line-height: $base-line-height;
+      }
+    }
+
+    h4 {
+      color: $white;
+      font-size: $font-size;
+      margin-left: .25em;
+
+      @include mq(sm) {
+        line-height: $base-line-height;
+        font-size: .9rem;
+      }
+    }
+
+    a.btn {
+      margin-left: $unit;
+      margin-bottom: $unit;
+    }
+
+  div#version {
+    color: darken($color-primary, 22%);
+  }
+
+  &.short {
+    min-height: 200px;
+  }
+
+  &.normal {
+    min-height: 350px;
+  }
+
+  &.tall {
+    min-height: 500px;
+  }
+
+  .superhero-img {
+    float: left;
+    width: 400px;
+
+    @include mq(md) {
+
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+
+    img.guy-pointing {
+      position: absolute;
+      top: 25px;
+      left: 35px;
+      width: 100%;
+      max-width: 400px;
+      z-index: 100;
+
+      @include mq(lg) {
+        max-width: 350px;
+      }
+
+      @include mq(md) {
+        top: 20px;
+        left: -60px;
+        max-width: 220px;
+      }
+    }
+  }
+
+  .superhero-content {
+    position: absolute;
+    right: 0;
+    float: left;
+    width: calc(100% - 400px);
+
+    @include mq(md) {
+      float: right;
+      width: 80%;
+      padding: $unit-xs $unit-xl $unit-xl $unit-xl;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      padding: $unit-xs $unit-xl $unit-xl $unit-xl;
+    }
+
+    h2 {
+      max-width: 1400px;
+      font-size: $font-size-jumbo * .9;
+      font-weight: $font-weight-light;
+      line-height: 135%;
+
+      @include mq(lg) {
+        width: 100%;
+        font-size: $font-size-xxl * .9;
+        line-height: 135%;
+      }
+
+      @include mq(md) {
+        width: 100%;
+        font-size: $font-size-xl;
+        line-height: 115%;
+      }
+
+      @include mq(sm) {
+        font-size: $font-size-xl;
+        line-height: 115%;
+      }
+    }
+
+    h4 {
+      max-width: 1200px;
+      padding-right: $unit-jumbo * 2;
+      font-size: $font-size-xl * .85;
+      text-transform: initial;
+      line-height: 140%;
+
+      @include mq(lg) {
+        max-width: none;
+        padding-right: $unit-jumbo;
+        font-size: $font-size-lg * .9;
+      }
+
+      @include mq(md) {
+        margin-top: 20px;
+        padding-right: $unit-xs;
+        font-size: $font-size * 1.1;
+      }
+
+      @include mq(sm) {
+        margin-top: $unit-lg;
+        padding-right: $unit-xs;
+        font-size: $font-size-md * .9;
+      }
+    }
+  }
+}
+
+.superhero-brand {
+  padding-top: $unit-xxs;
+  padding-left: $unit-lg;
+  background-color: $color-primary;
+
+  #xiri_logo {
+    float: left;
+    margin-top: $unit-xxs;
+    margin-left: $unit-xs;
+    background-color: $color-primary;
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  a {
+    img{
+      width: 100%;
+      max-width: 120px;
+    }
+  }
+}
+
+.superhero-nav {
+  background-color: $color-primary;
+
+  @include mq(sm) {
+    display: none;
+  }
+
+  #tw_logo {
+    img {
+      position: relative;
+      top: -3px;
+      width: 100%;
+      max-width: 30px;
+      fill: $black;
+    }
+  }
+
+  ul {
+    float: right;
+    width: 510px;
+
+    li {
+      float: left;
+      width: auto;
+      padding: $unit $unit;
+
+      a {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        color: $black;
+        text-transform: uppercase;
+
+        @include mq(sm) {
+          color: $white;
+        }
+
+        &:hover {
+          color: $white;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          @include mq(sm) {
+
+          }
+        }
+      }
+    }
+  }
+}
